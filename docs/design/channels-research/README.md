@@ -1,6 +1,6 @@
 # Channels research
 
-Date started: 2026-07-20. Status: competitive research. Review copy on Mahmoud's fork; not intended to merge into Agenta-AI/agenta.
+Date started: 2026-07-20. Status: review copy on Mahmoud's fork; not intended to merge into Agenta-AI/agenta. Competitive research.
 
 ## The feature under study
 
@@ -13,12 +13,19 @@ continued from any surface (the web app, another channel). Optionally, approvals
 
 ## Approach (mirrors docs/design/mcp-gateway-research/)
 
-1. **Light pass** (this phase): parallel subagents survey vendors from their docs,
-   landing pages, and code. One raw file per vendor group in `raw/`. Goal: agree on
-   direction and the requirement set with Mahmoud.
-2. **Deep pass**: after feedback, deeper research on the agreed direction.
-3. **Synthesis**: `report.md` (explains the space step by step) and
-   `first-principles-design.md` (architecture / RFC for Agenta).
+1. **Light pass** (done): parallel subagents surveyed 20+ vendors from their docs,
+   landing pages, and code. One raw file per vendor group in `raw/`; synthesis in
+   `early-findings.md`. Mahmoud's review of that document produced the decisions.
+2. **Deep pass** (done): `decisions.md` records the decisions and two fact
+   corrections. Five further inputs in `raw/`: `agenta-primitives.md` (codebase
+   audit), `oss-gateways.md` (LangBot/matterbridge/OpenClaw/Hermes source study),
+   `integration-sdks.md` (Botpress/Bot Framework/Chatwoot/Novu contract study),
+   `enterprise-posture.md` (CISO requirements and deal-killing mistakes),
+   `verifications.md` (fact checks), plus `brainstorm-brief.md` and
+   `gpt56-brainstorm.md` (a divergent architecture brainstorm from GPT-5.6).
+3. **Synthesis**: `architecture.md`, the reviewed design: primitives, inbound and
+   outbound paths, identity and enterprise invariants, the bridge contract for
+   third-party channels, and the build plan.
 
 ## Extraction template (what each raw file answers)
 
